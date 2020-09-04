@@ -1,0 +1,89 @@
+<div class="product-forms">
+  <div class="product-form-left form">
+    <h2 class="form__title">Product description</h2>
+    <label class="form__label" for="product-name">Title</label>
+    <input
+      id="product-name"
+      class="form__input"
+      type="text"
+      value=""
+      placeholder="Product title"
+      [(ngModel)]="product.title"
+    />
+    <label class="form__label" for="product-description">Description</label>
+    <textarea
+      id="product-description"
+      class="form__textarea"
+      name=""
+      cols="1"
+      rows="6"
+      placeholder="Write your product desription"
+      [(ngModel)]="product.description"
+    ></textarea>
+    <label class="form__label" for="product-sku">SKU</label>
+    <input
+      id="product-sku"
+      class="form__input"
+      type="text"
+      value=""
+      placeholder="SKU"
+      [(ngModel)]="product.sku"
+    />
+  </div>
+  <div class="product-form-right form">
+    <h2 class="form__title">Product details</h2>
+    <label class="form__label" for="product-price">Price</label>
+    <div class="form__input-with-prefix">
+      <div class="form__input-prefix">$</div>
+      <input
+        id="product-price"
+        class="form__input form__input--after-prefix"
+        type="text"
+        value=""
+        placeholder="00.00"
+        [(ngModel)]="product.price"
+      />
+    </div>
+    <label class="form__label" for="discount-price"
+      >Discount price (optional)</label
+    >
+    <div class="form__input-with-prefix">
+      <div class="form__input-prefix">$</div>
+      <input
+        id="discount-price"
+        class="form__input form__input--after-prefix"
+        type="text"
+        value=""
+        placeholder="00.00"
+        [(ngModel)]="product.price_offer"
+      />
+    </div>
+    <label class="form__label" for="delivery-cost">Delivery cost</label>
+    <div class="form__input-with-prefix">
+      <div class="form__input-prefix">$</div>
+      <input
+        id="delivery-cost"
+        class="form__input form__input--after-prefix"
+        type="text"
+        value=""
+        placeholder="00.00"
+        [(ngModel)]="product.delivery_cost"
+      />
+    </div>
+
+    <label class="form__label" for="stock">Stock</label>
+    <div class="form__input-with-prefix">
+      <input
+        id="stock"
+        class="form__input"
+        type="text"
+        value=""
+        placeholder="0"
+        [(ngModel)]="product.stock"
+      />
+    </div>
+  </div>
+</div>
+<div class="button-wrapper">
+  <a class="product__button" (click)="addProduct()">Save</a>
+</div>

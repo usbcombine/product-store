@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: soleil;
+  src: url("/assets/soleil.ttf");
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f7fd;
+  font-family: soleil, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.product__button {
+  color: #0087ef;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  white-space: nowrap;
+  padding: 12px 40px;
+  border: 1px solid #e3e3e3;
+  border-radius: 100px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.product__button:hover {
+  opacity: 0.7;
+}
+
+.button-circle {
+  position: fixed;
+  top: 64px;
+  right: 64px;
+  height: 80px;
+  width: 80px;
+  color: #ffffff;
+  background-color: #0087ef;
+  text-decoration: none;
+  font-size: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-circle:hover {
+  /* background-color: aqua; */
+  opacity: 0.7;
+}

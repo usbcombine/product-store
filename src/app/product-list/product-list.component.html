@@ -1,0 +1,20 @@
+<div class="product__list">
+  <div class="product-header">
+    <div class="product-header__first-col">Product</div>
+    <div class="product-header__second-col">Price</div>
+    <div class="product-header__third-col">
+      <a class="product__button">Edit</a>
+      <a class="product__button">Delete</a>
+    </div>
+  </div>
+  <div class="product" *ngFor="let product of products">
+    <div class="product__name">
+      <span class="product__title">{{ product.title }}</span>
+      <span class="product__category">{{ product.description }}</span>
+    </div>
+    <div class="product__price">{{ product.price }}</div>
+    <a class="product__button" routerLink="/edit/{{ product.uuid }}">Edit</a>
+    <a class="product__button" (click)="deleteProduct(product.uuid)">Delete</a>
+  </div>
+</div>
+<a class="button-circle" routerLink="/add">+</a>
